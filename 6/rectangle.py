@@ -1,4 +1,4 @@
-# Solution for square
+# Solution for rectangle
 
 def lineFunc0(x, y):
     if y < 10:

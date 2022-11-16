@@ -5,10 +5,10 @@ def ability2(pile_x, pile_y):
     return (pile_x, pile_y + 1)
 
 def ability3(pile_x, pile_y):
-    return (pile_x * 2, pile_y)
+    return (pile_x * 3, pile_y)
 
 def ability4(pile_x, pile_y):
-    return (pile_x, pile_y * 2)
+    return (pile_x, pile_y * 3)
 
 def useAllAbilities(pile_x, pile_y):
     results = []
@@ -20,9 +20,9 @@ def useAllAbilities(pile_x, pile_y):
 abilities = [ability1, ability2, ability3, ability4]
 
 def step19(pile_x, pile_y, n):
-    if n == 2 and pile_x + pile_y >= ttl_need:
+    if n == 1 and pile_x + pile_y >= ttl_need:
         return True
-    elif n == 2 and pile_x + pile_y < ttl_need:
+    elif n == 1 and pile_x + pile_y < ttl_need:
         return False
     else:
         result = False
@@ -31,9 +31,9 @@ def step19(pile_x, pile_y, n):
         return result
 
 def step20(pile_x, pile_y, n):
-    if n == 3 and pile_x + pile_y >= ttl_need:
+    if n == 2 and pile_x + pile_y >= ttl_need:
         return True
-    elif n == 3 and pile_x + pile_y < ttl_need:
+    elif n == 2 and pile_x + pile_y < ttl_need:
         return False
     else:
         result = False
@@ -82,7 +82,7 @@ def solve(l_bound, r_bound, pile_x, pile_y):
     print(f"Answer for 21: {answer_21}")
 
 if __name__ == "__main__":
-    ttl_need = 77
-    pile_x, pile_y = 7, -1
+    ttl_need = 68
+    pile_x, pile_y = 6, -1
     l_bound, r_bound = 1, ttl_need - pile_x - 1
     solve(l_bound, r_bound, pile_x, pile_y)
