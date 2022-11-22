@@ -13,6 +13,7 @@ tom.color("white")
 PIXELS_PER_1 = 30
 DOT_SIZE = 5
 SYS_SIZE = 20
+dot_color = "red"
 
 def drawCoordinateSys():
     tom.penup()
@@ -43,7 +44,7 @@ def drawCoordinateSys():
         for j in range(SYS_SIZE):
 
             tom.pendown()
-            tom.dot(DOT_SIZE, "yellow")
+            tom.dot(DOT_SIZE, dot_color)
             tom.penup()
             tom.forward(PIXELS_PER_1)
 
@@ -55,7 +56,7 @@ def drawCoordinateSys():
 
         for j in range(SYS_SIZE):
             tom.pendown()
-            tom.dot(DOT_SIZE, "yellow")
+            tom.dot(DOT_SIZE, dot_color)
             tom.penup()
             tom.forward(PIXELS_PER_1)
 
